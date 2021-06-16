@@ -1,0 +1,30 @@
+:host{
+  vertical-align: middle;
+  margin-right: 16px;
+}
+
+.logo{
+  text-align: center;
+  padding: 1rem;
+}
+img{
+  height: 50px;
+  width:150px;
+}
+
+.mat-list-item{
+  color:rgb(8, 7, 7);
+  font-size:20px;
+  height: 44px;
+  margin-bottom: 4px;
+  margin-left: 50px;
+}
+
+
+
+.mat-subheader{
+  color:rgb(85, 81, 81);
+  font-size: 20px;
+  font-weight: 200;
+  margin-left: 50px;
+}
