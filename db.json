@@ -1,0 +1,28 @@
+{
+  "posts": [
+    {
+      "firstName": "Arohi Kadam",
+      "email": "arohi@gmail.com",
+      "phone": "2325622",
+      "role": "user",
+      "status": "active",
+      "password": "124",
+      "confirmPassword": "78907085873",
+      "id": 2
+    },
+    {
+      "firstName": "Maria Disuza",
+      "email": "maria@gmail.com",
+      "phone": "987654321",
+      "role": "admin",
+      "status": "inactive",
+      "password": "765421",
+      "confirmPassword": "098762634",
+      "id": 3
+    }
+  ],
+  "comments": [],
+  "profile": {
+    "name": "typicode"
+  }
+}

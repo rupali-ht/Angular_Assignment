@@ -1,0 +1,17 @@
+.addUser {
+    float: right;
+    background-color: rgb(173, 65, 173);
+    color: white;
+  }
+  .icon1 {
+    float: right;
+    background-color: white;
+    color: rgb(78, 34, 78);
+    margin-right: 10px;
+  }
+  
+  .icon2 {
+    float: right;
+    background-color: white;
+    color: rgb(78, 34, 78);
+  }

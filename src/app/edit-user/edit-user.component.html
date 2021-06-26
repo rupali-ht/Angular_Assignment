@@ -1,0 +1,116 @@
+
+<div class="container-fluid">
+    <div class="row">
+      <div class="p-3 mt-2" style="font-size: 20px">
+        User
+        <div class="btn btn-light addUser" routerLink="/userForm">+Add User</div>
+        <div class="btn btn-light icon1">
+          <mat-icon routerLink="/cardView"> format_list_bulleted</mat-icon>
+        </div>
+        <div class="btn btn-light icon2"><mat-icon routerLink="/tableView">apps</mat-icon></div>
+      </div>
+    </div>
+    <div class="w-60 mx-auto shadow p-5">
+      <form [formGroup]="editUser" (ngSubmit)="updateUser()">
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">
+            Name
+            <span aria-hidden="true" style="color: red"> * </span>
+          </label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              placeholder="First name"
+              name="firstName"
+              formControlName="firstName"
+              />
+              <br />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">
+            Email
+            <span aria-hidden="true" style="color: red"> * </span>
+          </label>
+          <div class="col-sm-10">
+            <input
+              type="text"
+              class="form-control form-control-lg"
+              placeholder="Email "
+              name="email"
+              formControlName="email"
+            /><br />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Phone</label>
+          <div class="col-sm-10">
+            <input
+              type="tel"
+              class="form-control form-control-lg"
+              placeholder="Phone Number"
+              name="phone"
+              formControlName="phone"
+            /><br />
+          </div>
+        </div>
+  
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Role</label>
+          <div class="col-sm-10">
+            <select formControlName="role"
+            name="role"class="form-control">
+              <option default>Select Role</option>
+              <option value="user">User</option>
+              <option value="admin">Admin</option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Status</label>
+          <div class="col-sm-10">
+            <select formControlName="status" name="status"class="form-control">
+              <option default>Select Status</option>
+              <option value="active">Active</option>
+              <option value="inactive">InActive</option>
+            </select>
+          </div>
+        </div>
+        <br />
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Password</label>
+          <div class="col-sm-10 md-2">
+            <input
+              type="password"
+              class="form-control form-control-lg"
+              placeholder="Enter Password"
+              formControlName="password"
+              name="password"
+            /><br />
+          </div>
+        </div>
+        <div class="form-group row">
+          <label class="col-sm-2 col-form-label">Confirm Password</label>
+          <div class="col-sm-10">
+            <input
+              type="password"
+              class="form-control form-control-lg"
+              placeholder="Enter Confirm Password"
+              formControlName="confirmPassword"
+              name="confirmPassword"
+            /><br />
+          </div>
+        </div>
+        <button
+          class="btn btn-primary btn-block"
+          style="margin-left: 150px"
+        >
+          update
+        </button>
+      </form>
+    </div>
+  </div>
+  
+  

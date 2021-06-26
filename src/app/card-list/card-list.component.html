@@ -1,0 +1,59 @@
+<section class="pb-5">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="p-3 mt-2" style="font-size: 20px">
+          User
+          <div class="btn btn-light addUser"routerLink="/userForm" >+Add User</div>
+          <div class="btn btn-light icon1" >
+            <mat-icon routerLink="/cardView"> format_list_bulleted</mat-icon>
+          </div>
+          <div class="btn btn-light icon2"><mat-icon routerLink="/tableView" >apps</mat-icon></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="row">
+          <div class="p-3 mt-2" style="font-size: 10px">
+            <div class="btn btn-light icon3">
+              <mat-icon> format_line_spacing</mat-icon> Sort By
+            </div>
+            <div class="btn btn-light icon4">
+              <mat-icon>filter_list</mat-icon>Filter By
+            </div>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4"*ngFor="let user of userData" >
+            <div class="image-flip">
+              <div class="mainflip flip-0">
+                <div class="frontside">
+                  <div class="card p-3">
+                    <div class="card-body text-right mr-5">
+                      <ngx-avatar class="img-fluid" name={{user.firstName}}></ngx-avatar>
+                      <div class="w-100 text-right">
+                         <h4 class="mb-0 mt-0 mr-5">{{user.firstName}}</h4> 
+                        <h4 class="mb-0 mt-0">{{user.email}}</h4>
+                         <div class="active-container">
+                          <div class="circle"></div>
+                        <h4 class="mb-0 mt-0">Active</h4>
+                        </div>
+                        <div style="padding-left: 100px;">
+                          <button  class="btn btn-light"(click)="delete.deleteUser(user.id)" ><mat-icon>delete_outline</mat-icon></button>
+                          <app-delete-user #delete></app-delete-user>
+                          <!-- <button  class="btn btn-light"  routerLink="/deleteUser/{{user.id}}" ><mat-icon>delete_outline</mat-icon></button> -->                          
+                          <button class="btn btn-light mr-0" routerLink="/editUser/{{user.id}}" ><mat-icon>edit</mat-icon></button>
+                      
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+
+
+
+  
