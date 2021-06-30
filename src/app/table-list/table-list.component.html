@@ -5,7 +5,9 @@
     <div class="btn btn-light icon1">
       <mat-icon routerLink="/cardView"> format_list_bulleted</mat-icon>
     </div>
-    <div class="btn btn-light icon2"><mat-icon routerLink="/tableView">apps</mat-icon></div>
+    <div class="btn btn-light icon2">
+      <mat-icon routerLink="/tableView">apps</mat-icon>
+    </div>
   </div>
 </div>
 <div class="row">
@@ -17,8 +19,18 @@
       <div class="btn btn-light icon4">
         <mat-icon>filter_list</mat-icon>Filter By
       </div>
+      <div  style="float:right;">
+        <input
+          type="text"
+          placeholder="Search here by name..."
+          class="form-control mr-sm-2 ml-5"
+          name="firstName"
+          [(ngModel)]="firstName"
+          (ngModelChange)="Search()"
+        />
+      </div>
     </div>
-<div>
+    <div>
       <table class="table table-striped">
         <thead>
           <tr>
@@ -39,27 +51,38 @@
         </thead>
         <tbody>
           <tr *ngFor="let user of userData">
-            <td>{{ user.id}}</td>
+            <td>{{ user.id }}</td>
             <td>
-              <ngx-avatar name={{user.firstName}}></ngx-avatar>
-              {{user.firstName}}  
-            </td> 
+              <ngx-avatar name="{{ user.firstName }}"></ngx-avatar>
+              {{ user.firstName }}
+            </td>
             <td>{{ user.email }}</td>
             <td>{{ user.phone }}</td>
-            <td>{{ user.role}}</td>
+            <td>{{ user.role }}</td>
             <td>{{ user.status }}</td>
             <td>{{ user.password }}</td>
             <td>{{ user.confirmPassword }}</td>
             <td>
-              <button  class="btn btn-light"(click)="delete.deleteUser(user.id)" ><mat-icon>delete_outline</mat-icon></button>
+              <button
+                class="btn btn-light"
+                (click)="delete.deleteUser(user.id)"
+              >
+                <mat-icon>delete_outline</mat-icon>
+              </button>
               <app-delete-user #delete></app-delete-user>
               <!-- <button  class="btn btn-light"  routerLink="/deleteUser/{{user.id}}" ><mat-icon>delete_outline</mat-icon></button> -->
             </td>
             <td>
-              <button class="btn btn-light mr-0" routerLink="/editUser/{{user.id}}" ><mat-icon>edit</mat-icon></button>
+              <button
+                class="btn btn-light mr-0"
+                routerLink="/editUser/{{ user.id }}"
+              >
+                <mat-icon>edit</mat-icon>
+              </button>
             </td>
           </tr>
         </tbody>
       </table>
     </div>
-  
+  </div>
+</div>

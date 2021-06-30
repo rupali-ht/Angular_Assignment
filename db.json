@@ -1,24 +1,34 @@
 {
   "posts": [
     {
+      "id": 2,
       "firstName": "Arohi Kadam",
       "email": "arohi@gmail.com",
-      "phone": "2325622",
-      "role": "user",
-      "status": "active",
-      "password": "124",
-      "confirmPassword": "78907085873",
-      "id": 2
+      "phone": "12345678900",
+      "password": "1234567",
+      "confirmPassword": "87653",
+      "status": "inactive",
+      "role": "user"
     },
     {
-      "firstName": "Maria Disuza",
-      "email": "maria@gmail.com",
-      "phone": "987654321",
-      "role": "admin",
-      "status": "inactive",
-      "password": "765421",
-      "confirmPassword": "098762634",
+      "firstName": "Rugved",
+      "email": "rugved@gmail.com",
+      "phone": "546372891234",
+      "role": "user",
+      "status": "active",
+      "password": "123426",
+      "confirmPassword": "31426",
       "id": 3
+    },
+    {
+      "id": 4,
+      "firstName": "Suyog",
+      "email": "suyog@gmail.com",
+      "phone": "546372891234",
+      "password": "",
+      "confirmPassword": "",
+      "status": "",
+      "role": ""
     }
   ],
   "comments": [],

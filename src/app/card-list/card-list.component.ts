@@ -9,6 +9,7 @@ import { ApiService } from '../APICalls/api.service';
 export class CardListComponent implements OnInit {
 
   userData :any;
+  firstName:any;
   constructor(private api:ApiService) { }
 
   ngOnInit(): void {
@@ -20,5 +21,14 @@ export class CardListComponent implements OnInit {
     .subscribe((res:any)=>{
       this.userData=res;
     })
+  }
+  Search(){
+    if(this.firstName==""){
+      this.ngOnInit();
+    }else{
+      this.userData=this.userData.filter((res:any)=>{
+        return res.firstName.toLocaleLowerCase().match(this.firstName.toLocaleLowerCase())
+      })
+    }
   }
 }
