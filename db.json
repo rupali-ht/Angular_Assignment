@@ -1,34 +1,114 @@
 {
   "posts": [
     {
+      "id": 1,
+      "firstName": "Rupali Thange",
+      "email": "rupali@gmail.com",
+      "phone": "546372891234",
+      "password": "123456",
+      "confirmPassword": "123465",
+      "status": "active",
+      "role": "user"
+    },
+    {
       "id": 2,
-      "firstName": "Arohi Kadam",
-      "email": "arohi@gmail.com",
-      "phone": "12345678900",
-      "password": "1234567",
-      "confirmPassword": "87653",
+      "firstName": "Suyog",
+      "email": "suyog@gmail.com",
+      "phone": "546372891234",
+      "password": "534251",
+      "confirmPassword": "52436",
       "status": "inactive",
       "role": "user"
     },
     {
-      "firstName": "Rugved",
-      "email": "rugved@gmail.com",
-      "phone": "546372891234",
-      "role": "user",
-      "status": "active",
-      "password": "123426",
-      "confirmPassword": "31426",
-      "id": 3
+      "id": 3,
+      "firstName": "Rupali",
+      "email": "rupali@gmail.com",
+      "phone": "2325622",
+      "password": "423152",
+      "confirmPassword": "132435",
+      "status": "inactive",
+      "role": "user"
     },
     {
       "id": 4,
-      "firstName": "Suyog",
-      "email": "suyog@gmail.com",
+      "firstName": "Arohi",
+      "email": "arohi@gmail.com",
+      "phone": "12345678900",
+      "password": "123",
+      "confirmPassword": "1234",
+      "status": "inactive",
+      "role": "user"
+    },
+    {
+      "id": 5,
+      "firstName": "Dev",
+      "email": "dev@gmail.com",
       "phone": "546372891234",
-      "password": "",
-      "confirmPassword": "",
-      "status": "",
-      "role": ""
+      "password": "123436",
+      "confirmPassword": "76542",
+      "status": "inactive",
+      "role": "user"
+    },
+    {
+      "id": 6,
+      "firstName": "Rajveer",
+      "email": "raj@gmail.com",
+      "phone": "1324364785647",
+      "password": "2132435",
+      "confirmPassword": "132435",
+      "status": "active",
+      "role": "admin"
+    },
+    {
+      "id": 7,
+      "firstName": "Mahi",
+      "email": "mahi@gmail.com",
+      "phone": "765443321",
+      "password": "123456",
+      "confirmPassword": "123456",
+      "status": "active",
+      "role": "user"
+    },
+    {
+      "id": 8,
+      "firstName": "Payal",
+      "email": "payal1@gmail.com",
+      "phone": "55443322776",
+      "password": "12345",
+      "confirmPassword": "76543",
+      "status": "inactive",
+      "role": "user"
+    },
+    {
+      "id": 9,
+      "firstName": "Zuber",
+      "email": "zuber@gmail.com",
+      "phone": "1234253673",
+      "password": "7654",
+      "confirmPassword": "12345",
+      "status": "inactive",
+      "role": "user"
+    },
+    {
+      "id": 10,
+      "firstName": "Xoriant",
+      "email": "xoriant@gmail.com",
+      "phone": "54642813",
+      "password": "1234567",
+      "confirmPassword": "1234",
+      "status": "active",
+      "role": "user"
+    },
+    {
+      "id": 12,
+      "firstName": "Bhavesh",
+      "email": "bha212@gmail.com",
+      "phone": "12345678900",
+      "password": "12345263",
+      "confirmPassword": "5423",
+      "status": "active",
+      "role": "admin"
     }
   ],
   "comments": [],

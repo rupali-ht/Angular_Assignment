@@ -13,9 +13,19 @@
 <div class="row">
   <div class="row">
     <div class="p-3 mt-2" style="font-size: 10px">
-      <div class="btn btn-light icon3">
+      <!-- <div class="btn btn-light icon3">
         <mat-icon> format_line_spacing</mat-icon> Sort By
-      </div>
+      </div> -->
+      <!-- <div> -->
+        <button class="btn btn-light icon3"mat-button [matMenuTriggerFor]="menu">
+          <mat-icon> format_line_spacing</mat-icon>
+          Sort By</button>
+        <mat-menu #menu="matMenu">
+      <button mat-menu-item (click)="sort('id')">On basis of ID</button>
+      <button mat-menu-item (click)="sort('firstName')">A-Z</button>
+      <button mat-menu-item (click)="sort('firstName')">Z-A</button>
+      </mat-menu>
+      <!-- </div> -->
       <div class="btn btn-light icon4">
         <mat-icon>filter_list</mat-icon>Filter By
       </div>
@@ -50,7 +60,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of userData">
+          <tr *ngFor="let user of userData |orderBy :key : reverse | paginate: {itemsPerPage:5,currentPage:p};">
             <td>{{ user.id }}</td>
             <td>
               <ngx-avatar name="{{ user.firstName }}"></ngx-avatar>
@@ -64,7 +74,7 @@
             <td>{{ user.confirmPassword }}</td>
             <td>
               <button
-                class="btn btn-light"
+                class="btn btn-light "
                 (click)="delete.deleteUser(user.id)"
               >
                 <mat-icon>delete_outline</mat-icon>
@@ -74,7 +84,7 @@
             </td>
             <td>
               <button
-                class="btn btn-light mr-0"
+                class="btn btn-light "
                 routerLink="/editUser/{{ user.id }}"
               >
                 <mat-icon>edit</mat-icon>
@@ -83,6 +93,11 @@
           </tr>
         </tbody>
       </table>
+      <div style="float: right;color: gray;">
+        Items per page:10
+        <pagination-controls style="float:right;"(pageChange)="p = $event"></pagination-controls>
+
+      </div>
     </div>
   </div>
 </div>

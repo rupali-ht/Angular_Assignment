@@ -22,6 +22,9 @@ import { EditUserComponent } from './edit-user/edit-user.component';
 import { NgModule } from '@angular/core';
 import { AvatarModule } from 'ngx-avatar';
 import { ToastrModule } from 'ngx-toastr';
+import { Ng2SearchPipeModule } from 'ng2-search-filter';
+import { NgxPaginationModule } from 'ngx-pagination';
+import { Ng2OrderModule } from 'ng2-order-pipe';
 
 
 
@@ -54,6 +57,10 @@ import { ToastrModule } from 'ngx-toastr';
     ReactiveFormsModule,
     AvatarModule,
     ToastrModule.forRoot(),
+    Ng2SearchPipeModule,
+    NgxPaginationModule,
+    Ng2OrderModule
+  
   ],
   providers: [],
   bootstrap: [AppComponent],

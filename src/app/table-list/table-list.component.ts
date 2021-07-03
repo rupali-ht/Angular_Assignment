@@ -11,6 +11,7 @@ export class TableListComponent implements OnInit {
 
   userData :any;
   firstName:any;
+  p:number=1;
   constructor(private api:ApiService) { }
 
   ngOnInit(): void {
@@ -32,5 +33,13 @@ export class TableListComponent implements OnInit {
         return res.firstName.toLocaleLowerCase().match(this.firstName.toLocaleLowerCase())
       })
     }
+  }
+
+  key:string ='id';
+  reverse :boolean =false;
+  sort(key:any)
+  {
+    this.key=key;
+    this.reverse=!this.reverse;
   }
 }
