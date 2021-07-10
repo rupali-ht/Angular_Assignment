@@ -1,14 +1,14 @@
 {
   "posts": [
     {
-      "id": 1,
       "firstName": "Rupali Thange",
       "email": "rupali@gmail.com",
       "phone": "546372891234",
+      "role": "admin",
+      "status": "active",
       "password": "123456",
       "confirmPassword": "123465",
-      "status": "active",
-      "role": "user"
+      "id": 1
     },
     {
       "id": 2,
@@ -21,14 +21,14 @@
       "role": "user"
     },
     {
-      "id": 3,
       "firstName": "Rupali",
       "email": "rupali@gmail.com",
       "phone": "2325622",
+      "role": "admin",
+      "status": "inactive",
       "password": "423152",
       "confirmPassword": "132435",
-      "status": "inactive",
-      "role": "user"
+      "id": 3
     },
     {
       "id": 4,
@@ -108,6 +108,16 @@
       "password": "12345263",
       "confirmPassword": "5423",
       "status": "active",
+      "role": "admin"
+    },
+    {
+      "id": 13,
+      "firstName": "Rupali Thange",
+      "email": "",
+      "phone": "",
+      "password": "",
+      "confirmPassword": "",
+      "status": "",
       "role": "admin"
     }
   ],

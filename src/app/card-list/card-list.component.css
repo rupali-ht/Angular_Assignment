@@ -17,7 +17,7 @@
 .active-container {
   position: relative;
   padding-bottom: 17px;
-  margin-left: 3rem;
+  margin-left: 6rem;
 }
 
 .circle {
@@ -27,7 +27,7 @@
   border-radius: 50%;
   position: absolute;
   top: 10px;
-  left: 23px;
+  right:140px;
 }
 .addUser {
   float: right;

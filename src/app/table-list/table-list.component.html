@@ -16,20 +16,34 @@
       <!-- <div class="btn btn-light icon3">
         <mat-icon> format_line_spacing</mat-icon> Sort By
       </div> -->
-      <!-- <div> -->
-        <button class="btn btn-light icon3"mat-button [matMenuTriggerFor]="menu">
-          <mat-icon> format_line_spacing</mat-icon>
-          Sort By</button>
-        <mat-menu #menu="matMenu">
-      <button mat-menu-item (click)="sort('id')">On basis of ID</button>
-      <button mat-menu-item (click)="sort('firstName')">A-Z</button>
-      <button mat-menu-item (click)="sort('firstName')">Z-A</button>
+
+      <button class="btn btn-light icon3" mat-button [matMenuTriggerFor]="menu">
+        <mat-icon> format_line_spacing</mat-icon>
+        Sort By
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="sort('id')">On basis of ID</button>
+        <button mat-menu-item (click)="sort('firstName')">A-Z</button>
+        <button mat-menu-item (click)="sort('firstName')">Z-A</button>
       </mat-menu>
-      <!-- </div> -->
-      <div class="btn btn-light icon4">
+
+      <button
+        class="btn btn-light icon3"
+        mat-button
+        [matMenuTriggerFor]="menu1"
+      >
+        <mat-icon> format_line_spacing</mat-icon>
+        Filter By
+      </button>
+      <mat-menu #menu1="matMenu">
+        <button mat-menu-item (click)="filterByUser()">User</button>
+        <button mat-menu-item (click)="filterByAdmin()">Admin</button>
+      </mat-menu>
+
+      <!-- <div class="btn btn-light icon4">
         <mat-icon>filter_list</mat-icon>Filter By
-      </div>
-      <div  style="float:right;">
+      </div> -->
+      <div style="float: right">
         <input
           type="text"
           placeholder="Search here by name..."
@@ -60,7 +74,13 @@
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let user of userData |orderBy :key : reverse | paginate: {itemsPerPage:5,currentPage:p};">
+          <tr
+            *ngFor="
+              let user of userData
+                | orderBy: key:reverse
+                | paginate: { itemsPerPage: 5, currentPage: p }
+            "
+          >
             <td>{{ user.id }}</td>
             <td>
               <ngx-avatar name="{{ user.firstName }}"></ngx-avatar>
@@ -74,7 +94,7 @@
             <td>{{ user.confirmPassword }}</td>
             <td>
               <button
-                class="btn btn-light "
+                class="btn btn-light"
                 (click)="delete.deleteUser(user.id)"
               >
                 <mat-icon>delete_outline</mat-icon>
@@ -84,7 +104,7 @@
             </td>
             <td>
               <button
-                class="btn btn-light "
+                class="btn btn-light"
                 routerLink="/editUser/{{ user.id }}"
               >
                 <mat-icon>edit</mat-icon>
@@ -93,10 +113,12 @@
           </tr>
         </tbody>
       </table>
-      <div style="float: right;color: gray;">
+      <div style="float: right; color: gray">
         Items per page:10
-        <pagination-controls style="float:right;"(pageChange)="p = $event"></pagination-controls>
-
+        <pagination-controls
+          style="float: right"
+          (pageChange)="p = $event"
+        ></pagination-controls>
       </div>
     </div>
   </div>

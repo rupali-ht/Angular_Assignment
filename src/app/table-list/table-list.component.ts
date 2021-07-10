@@ -12,6 +12,8 @@ export class TableListComponent implements OnInit {
   userData :any;
   firstName:any;
   p:number=1;
+  user:any;
+  admin:any;
   constructor(private api:ApiService) { }
 
   ngOnInit(): void {
@@ -32,9 +34,29 @@ export class TableListComponent implements OnInit {
       this.userData=this.userData.filter((res:any)=>{
         return res.firstName.toLocaleLowerCase().match(this.firstName.toLocaleLowerCase())
       })
+     
     }
   }
 
+  filterByUser(){
+     if(this.user==""){
+       this.ngOnInit();
+     }else{
+       this.userData=this.userData.filter((res:any)=>{
+        return res.role ==='user';
+       }) 
+     }
+  }
+
+  filterByAdmin(){
+    if(this.admin==""){
+      this.ngOnInit();
+    }else{
+      this.userData=this.userData.filter((res:any)=>{
+       return res.role ==='admin'
+      })
+    }
+  }
   key:string ='id';
   reverse :boolean =false;
   sort(key:any)
