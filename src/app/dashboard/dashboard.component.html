@@ -1,10 +1,53 @@
-<div class="container-fluid page">
-    <div class="d-flex page_box p-3 mt-2">
-        Home
+<section class="pb-5">
+    <div class="container-fluid">
+<div class="p-3 mt-2" style="font-size: 20px">Dashboard</div>
+
+<div class="row">
+  <div class="col-xs-12 col-sm-6 col-md-4">
+      <div class="card">
+        <div class="card-body text-left">
+          <img class="img-fluid" src="assets/images/a.png" alt="card image" />
+
+          <div>
+            <a routerLinkActive="list-item-active" style="color: black;"routerLink="/tableView">
+                <h2>Total Users</h2>
+              </a>
+            <h1>{{ users.length }}</h1>
+          </div>
+      </div>
     </div>
-    <div class="page_content shadow p-3 position-relative">
-    <div class="page_content-data position-absolute">
-         contents
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="image-flip">
+      <div class="card">
+        <div class="card-body text-right">
+          <img class="img-fluid" src="assets/images/b.png" alt="card image" />
+
+          <div >
+            <h2>Active Users</h2>
+            <h1>{{ ActiveCount.length }}</h1>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  <div class="col-xs-12 col-sm-6 col-md-4">
+    <div class="image-flip">
+      <div class="card">
+        <div class="card-body text-right">
+          <img class="img-fluid" src="assets/images/c.png" alt="card image" />
+          <div >
+            <h2>InActive Users</h2>
+            <h1>{{ InActiveCount.length }}</h1>
+          </div>
+        </div>
+      </div>
     </div>
+  </div>
+  </div>
+</div> 
+</section>
+<div>
+  <app-graph></app-graph>
 </div>
+

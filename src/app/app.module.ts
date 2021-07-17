@@ -25,6 +25,9 @@ import { ToastrModule } from 'ngx-toastr';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { Ng2OrderModule } from 'ng2-order-pipe';
+import { ChartsModule } from 'ng2-charts';
+import { GraphComponent } from './graph/graph.component';
+
 
 
 
@@ -40,6 +43,7 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     CardListComponent,
     DeleteUserComponent,
     EditUserComponent,
+    GraphComponent
     
   ],
   imports: [
@@ -59,7 +63,8 @@ import { Ng2OrderModule } from 'ng2-order-pipe';
     ToastrModule.forRoot(),
     Ng2SearchPipeModule,
     NgxPaginationModule,
-    Ng2OrderModule
+    Ng2OrderModule,
+    ChartsModule
   
   ],
   providers: [],
